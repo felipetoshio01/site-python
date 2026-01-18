@@ -7,6 +7,7 @@
     <style>
         @charset "UTF-8";
 
+        @import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&family=Press+Start+2P&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
         * {
             margin: 0px;
             padding: 0px;
@@ -19,17 +20,219 @@
             --yellow-light: #F0CE48;
             --yellow-medium: #B0A061;
             --yellow-dark: #706C5A;
+
+            --header-title: 'Press Start 2P', monospace;
+            --header-font: Consolas, monospace;
+            --main-title-font: Oxanium, monospace;
+            --main-font: Roboto, Arial, sans-serif
         }
 
-        header {
-            padding: 24px;
-            background: black linear-gradient(to bottom, var(--blue-medium), var(--yellow-light));
+        body {
+            background-color: rgb(194, 194, 194);
         }
+
+        /* Header */
+        section#title {
+            padding: 24px;
+            background: black radial-gradient(circle, var(--blue-medium)70%, var(--yellow-medium));
+        }
+
+        section#title > h1 {
+            text-align: center;
+            font: normal normal 1.5em var(--header-title);
+            color: white;
+            margin-bottom: 12px;
+        }
+
+        section#title > h2 {
+            text-align: center;
+            font: normal normal 1.1em var(--header-font);
+            color: white;
+        }
+
+        nav {
+            display: flex;
+            border-top: 2px solid white;
+            background-color: var(--blue-dark);
+        }
+
+        nav > a {
+            font-family: var(--header-font);
+            color: white;
+            text-decoration: none;
+            padding: 12px;
+            
+            transition: all 0.2s linear;
+        }
+
+        nav > a:hover {
+            background-color: var(--yellow-light);
+            color: var(--blue-dark);
+        }
+
+
+        /* Main */
+        main {
+            padding: 12px;
+            max-width: 960px;
+            margin: auto;
+            background-color: white;
+        }
+
+        main * {
+            margin-bottom: 16px;
+        }
+
+        main h2 {
+            font: normal bold 1.5em var(--main-title-font);
+            margin-bottom: 12px;
+        }
+
+        p {
+            font: normal normal 1em var(--main-font);
+            line-height: 1.5em;
+            text-align: justify;
+            text-indent: 24px;
+        }
+
+        p a {
+            color: var(--blue-light);
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        p a:hover {
+            text-decoration: underline;
+            color: var(--yellow-medium);
+        }
+
+        p a:visited:hover {
+            text-decoration: underline;
+            color: var(--yellow-medium);
+        }
+
+        p a:visited {
+            color: var(--blue-medium);
+        }
+
+        p code {
+            background-color: rgb(230, 230, 230);
+            border-radius: 2px;
+            font-family: Consolas, monospace;
+        }
+
+        /* Áreas de código */
+        section.code-ex * {
+            margin-bottom: 0px;
+        }
+
+        section.code-ex {
+            background-color: #1F1F1F;
+            padding: 24px;
+            max-width: 720px;
+            margin: auto;
+            margin-bottom: 16px;
+        }
+
+        section.code-ex code {
+            display: block;
+            font-family: Consolas, monospace;
+            color: #D4D4D4;
+        }
+
+        code.indent {
+            text-indent: 24px;
+        }
+        
+        span.control-world {
+            color: #BC4768;
+        }
+
+        span.code-text {
+            color: #9CDCFE;
+        }
+
+        span.funcion {
+            color: #75EFAF;
+        }
+
+
+        /*Footer */
+        footer {
+            background-color: var(--blue-dark);
+            border-top: 5px solid var(--yellow-light);
+            padding: 20px 12px 56px 12px;
+            max-width: 960px;
+            margin: auto;
+        }
+
+        footer p {
+            color: white;
+            text-align: center;
+        }
+        
     </style>
 </head>
 <body>
     <header>
-        <h1>Aprendendo Python</h1>
+        <section id="title">
+            <h1>Aprendendo Python</h1>
+            <h2>Programar em Python nunca foi tão fácil</h2>
+        </section>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Guias</a>
+            <a href="#">Contribuir</a>
+            <a href="#">FAQ</a>
+        </nav>
     </header>
+    <main>
+        <h2>Condicionais</h2>
+        <p>Condicionais são formas do código realizar determinda ação, dependendo do valor <strong>booleano</strong> de uma expressão. Declara-se uma condicional com as palavras-chave <code>if...</code> e <code>else...</code> , onde, caso determinada expressão seja <code>True</code> , o código abaixo do <code>if</code> será realizado e, caso a expressão tenha valor <code>False</code> , será validado o código detro do <code>else</code> .</p>
+
+        <section class="code-ex">
+            <code><span class="control-world">if</span> <span class="code-text">condition</span>:</code>
+            <code class="indent"><span class="funcion">action1</span>()</code>
+
+            <br>
+
+            <code><span class="control-world">else</span>:</code>
+            <code class="indent"><span class="funcion">action2</span>()</code>
+        </section>
+
+        <p>Também podemos comparar diversas condições, usando vários <code>elif...</code> (<em>else if</em>) em sequência:</p>
+
+        <section class="code-ex">
+            <code><span class="control-world">if</span> <span class="code-text">condition1</span>:</code>
+            <code class="indent"><span class="funcion">action1</span>()</code>
+
+            <br>
+
+            <code><span class="control-world">elif</span> <span class="code-text">condition2</span></code>
+            <code class="indent"><span class="funcion">action2</span>()</code>
+
+            <br>
+
+            <code><span class="control-world">elif</span> <span class="code-text">condition3</span></code>
+            <code class="indent"><span class="funcion">action3</span>()</code>
+
+            <br>
+
+            <code><span class="control-world">else</span>:</code>
+            <code class="indent"><span class="funcion">action4</span>()</code>
+        </section>
+
+        <p>Vale notar que caso a <code>condition2</code> seja considerada verdadeira, a checagem da <code>condition3</code> não ocorrerá, tal que a ação abaixo dela não ocorra, mesmo se a condição seja verdadeira.</p>
+
+        <aside>
+            <h2>Gostou desse guia?</h2>
+            <p>Cheque os nossos outros tutoriais de Python como esse no nosso site, abrangendo conteúdos do nível básico, intermadiário e avançado. Não esqueça também de compartilhar nosso conteúdo, caso ele tenha sido útil para você.</p>
+            <p>Para informações mais detalhadas da linguagem, acesse a documentação no <a href="https://www.python.org/doc/" target="_blank" title="Site oficial do Python" rel="external">site oficial do Python</a>.</p>
+        </aside>
+    </main>
+    <footer>
+        <p>Site criado por Felipe Toshio</p>
+        <p><strong>OBS:</strong> esse site é só um modelo exemplo, feito para práticar HTML5 e CSS3</p>
+    </footer>
 </body>
 </html>
