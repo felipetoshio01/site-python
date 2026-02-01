@@ -152,7 +152,7 @@
             color: #9CDCFE;
         }
 
-        span.funcion {
+        span.function {
             color: #75EFAF;
         }
 
@@ -169,6 +169,11 @@
         footer p {
             color: white;
             text-align: center;
+        }
+
+        footer p a:hover {
+            text-decoration: underline;
+            color: var(--yellow-light);
         }
         
     </style>
@@ -188,51 +193,51 @@
     </header>
     <main>
         <h2>Condicionais</h2>
-        <p>Condicionais são formas do código realizar determinda ação, dependendo do valor <strong>booleano</strong> de uma expressão. Declara-se uma condicional com as palavras-chave <code>if...</code> e <code>else...</code> , onde, caso determinada expressão seja <code>True</code> , o código abaixo do <code>if</code> será realizado e, caso a expressão tenha valor <code>False</code> , será validado o código detro do <code>else</code> .</p>
+        <p>Condicionais são formas do código realizar determinada ação, dependendo do valor <strong>booleano</strong> de uma expressão. Declara-se uma condicional com as palavras-chave <code>if...</code> e <code>else...</code> , onde, caso determinada expressão seja <code>True</code> , o código abaixo do <code>if</code> será realizado e, caso a expressão tenha valor <code>False</code> , será validado o código dentro do <code>else</code> .</p>
 
         <section class="code-ex">
             <code><span class="control-world">if</span> <span class="code-text">condition</span>:</code>
-            <code class="indent"><span class="funcion">action1</span>()</code>
+            <code class="indent"><span class="function">action1</span>()</code>
 
             <br>
 
             <code><span class="control-world">else</span>:</code>
-            <code class="indent"><span class="funcion">action2</span>()</code>
+            <code class="indent"><span class="function">action2</span>()</code>
         </section>
 
         <p>Também podemos comparar diversas condições, usando vários <code>elif...</code> (<em>else if</em>) em sequência:</p>
 
         <section class="code-ex">
             <code><span class="control-world">if</span> <span class="code-text">condition1</span>:</code>
-            <code class="indent"><span class="funcion">action1</span>()</code>
+            <code class="indent"><span class="function">action1</span>()</code>
 
             <br>
 
             <code><span class="control-world">elif</span> <span class="code-text">condition2</span></code>
-            <code class="indent"><span class="funcion">action2</span>()</code>
+            <code class="indent"><span class="function">action2</span>()</code>
 
             <br>
 
             <code><span class="control-world">elif</span> <span class="code-text">condition3</span></code>
-            <code class="indent"><span class="funcion">action3</span>()</code>
+            <code class="indent"><span class="function">action3</span>()</code>
 
             <br>
 
             <code><span class="control-world">else</span>:</code>
-            <code class="indent"><span class="funcion">action4</span>()</code>
+            <code class="indent"><span class="function">action4</span>()</code>
         </section>
 
         <p>Vale notar que caso a <code>condition2</code> seja considerada verdadeira, a checagem da <code>condition3</code> não ocorrerá, tal que a ação abaixo dela não ocorra, mesmo se a condição seja verdadeira.</p>
 
         <aside>
             <h2>Gostou desse guia?</h2>
-            <p>Cheque os nossos outros tutoriais de Python como esse no nosso site, abrangendo conteúdos do nível básico, intermadiário e avançado. Não esqueça também de compartilhar nosso conteúdo, caso ele tenha sido útil para você.</p>
+            <p>Cheque os nossos outros tutoriais de Python como esse no nosso site, abrangendo conteúdos do nível básico, intermediário e avançado. Não esqueça também de compartilhar nosso conteúdo, caso ele tenha sido útil para você.</p>
             <p>Para informações mais detalhadas da linguagem, acesse a documentação no <a href="https://www.python.org/doc/" target="_blank" title="Site oficial do Python" rel="external">site oficial do Python</a>.</p>
         </aside>
     </main>
     <footer>
         <p>Site criado por Felipe Toshio</p>
-        <p><strong>OBS:</strong> esse site é só um modelo exemplo, feito para práticar HTML5 e CSS3</p>
+        <p><strong>OBS:</strong> esse site é só um modelo exemplo, feito para praticar HTML5 e CSS3</p>
     </footer>
 </body>
 </html>
